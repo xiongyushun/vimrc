@@ -20,7 +20,9 @@ endfunc
 " 将tab键绑定为跳出括号  
 inoremap <TAB> <c-r>=SkipPair()<CR>
 
+" 在编辑模式下移动光标
 inoremap <C-l> <Right>
 inoremap <C-h> <Left>
 inoremap <C-k> <Up>
 inoremap <C-j> <Down>
+
