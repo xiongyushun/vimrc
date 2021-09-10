@@ -26,3 +26,25 @@ inoremap <C-h> <Left>
 inoremap <C-k> <Up>
 inoremap <C-j> <Down>
 
+" 窗口大小
+set lines=35 columns=140
+
+" 缩进
+set autoindent
+set cindent
+set ts=4
+set shiftwidth=4
+set softtabstop=4
+
+" 一键编译
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+    exec "w"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "! %<"
+    elseif &filetype == 'cpp'
+        exec "!g++ -g % -o %<"
+        exec "! %<"
+    endif
+endfunc
