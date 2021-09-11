@@ -48,3 +48,6 @@ func! CompileRunGcc()
         exec "! %<"
     endif
 endfunc
+
+" 显示行数
+set number
